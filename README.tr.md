@@ -1,8 +1,9 @@
 # Eventra — Etkinlik ve Mekân Yönetim Sistemi
 
 > Bu depo, canlıda kullanılan iç sistemin gizlilik odaklı vaka çalışmasıdır.
-> Kaynak kodu, erişim bilgileri, müşteri kayıtları ve operasyon ekranları
-> bilerek paylaşılmamıştır.
+> Kaynak kodu, erişim bilgileri ve müşteri kayıtları bilerek paylaşılmamıştır.
+> Aşağıdaki ekran görüntüleri yalnızca yapılandırma ve toplu görünümleri
+> içerir — rezervasyon kaydı ve müşteri verisi yoktur, işletme adı maskelenmiştir.
 
 [English version](README.md) · [Mimari](docs/ARCHITECTURE.md) · [Özellik haritası](docs/FEATURE-MAP.md)
 
@@ -68,6 +69,38 @@ teknik olmayan kullanıcıların kolaylığı birlikte dengelendi.
 
 Next.js 14, React 18, TypeScript, Tailwind CSS, Recharts, dnd-kit, Next.js API
 Routes, Prisma 6, MySQL, jsPDF, pdf-lib, XLSX, Nodemailer, Linux, Nginx ve PM2.
+
+
+## Arayüz
+
+### Ayarlardan yönetilen rezervasyon formu
+
+![Form alanları yönetimi](docs/screenshots/settings-driven-form-fields.png)
+
+Yukarıda anlatılan mühendislik probleminin arkasındaki ekran budur. Soldaki her
+organizasyon türü — düğün, kına, nişan, sünnet, mezuniyet, kurumsal toplantı —
+kendi alan yapılandırmasını taşır: hangi alanlar var, hangileri zorunlu, hangi
+sırayla görünüyor, hangi seçenek listesinden besleniyor.
+
+Bir etkinlik türüne alan eklemek, zorunlu işaretlemek, sırasını değiştirmek veya
+seçenek listesi bağlamak bir yönetici işlemidir. Hiçbiri şema göçü veya kod
+değişikliği gerektirmez; modülerlik gereksiniminin istediği tam olarak budur.
+
+### Rezervasyon takvimi
+
+![Rezervasyon takvimi](docs/screenshots/reservation-calendar.png)
+
+Durum, etkinlik türü, salon ve tarih filtreleriyle ay görünümü; üstte özet
+sayaçlar. Rezervasyon bulunmayan bir ayda gösterilmiştir.
+
+### Raporlama
+
+![Raporlama](docs/screenshots/reporting.png)
+
+Ortak filtre seti üzerinde altı rapor türü — rezervasyon, gelir, müşteri, durum
+analizi, organizasyon analizi ve aylık dağılım — PDF, Excel ve CSV dışa
+aktarımıyla. Bu özetlerin altındaki kayıt tablosu bilinçli olarak kadraj dışında
+bırakılmıştır.
 
 ## Sonuç
 

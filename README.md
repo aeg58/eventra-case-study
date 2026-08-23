@@ -1,8 +1,9 @@
 # Eventra — Event & Venue Management System
 
 > A privacy-conscious case study of a production internal platform. Source code,
-> credentials, customer records, and operational screenshots are intentionally
-> excluded.
+> credentials, and customer records are intentionally excluded. The screenshots
+> below show configuration and aggregate views only — no reservation records, no
+> customer data, and the venue name is masked.
 
 [Türkçe sürüm](README.tr.md) · [Architecture](docs/ARCHITECTURE.md) · [Feature map](docs/FEATURE-MAP.md)
 
@@ -109,6 +110,40 @@ breakdown.
 - Payments are recorded and reported, but the system does not process online card payments.
 - The platform is an internal operational product, not a public SaaS signup flow.
 - Production URLs, source code, credentials, and customer data are not included in this repository.
+
+
+## Interface
+
+### The settings-driven reservation form, from the configuration side
+
+![Reservation form field management](docs/screenshots/settings-driven-form-fields.png)
+
+This is the screen behind the engineering challenge described above. Each
+organisation type on the left — wedding, henna night, engagement, circumcision,
+graduation, corporate meeting — carries its own field configuration on the
+right: which fields exist, which are mandatory, in what order they appear, and
+what option lists they draw from.
+
+Adding a field to one event type, marking it required, reordering it, or
+attaching a lookup list is an administrator action. None of it is a schema
+migration or a code change, which is exactly what the modular requirement asked
+for.
+
+### Reservation calendar
+
+![Reservation calendar](docs/screenshots/reservation-calendar.png)
+
+Month view with status, event type, hall and date filters, and summary counters
+across the top. Shown here on a month with no bookings.
+
+### Reporting
+
+![Reporting](docs/screenshots/reporting.png)
+
+Six report types over a shared filter set — reservation, revenue, customer,
+status analysis, organisation analysis and monthly distribution — with PDF,
+Excel and CSV export. The record table below these summaries is deliberately
+outside the frame.
 
 ## Outcome
 
