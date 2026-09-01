@@ -1,6 +1,6 @@
 # Eventra — Event & Venue Management System
 
-> A privacy-conscious case study of a production internal platform. Source code,
+> A privacy-conscious case study of a B2B internal platform delivered to a client. Source code,
 > credentials, and customer records are intentionally excluded. The screenshots
 > below show configuration and aggregate views only — no reservation records, no
 > customer data, and the venue name is masked.
@@ -9,14 +9,14 @@
 
 ## Overview
 
-Eventra is a full-stack B2B system built for the daily operations of an event
+Eventra is a full-stack B2B system built for the operations of an event
 and wedding venue. It brings reservations, customers, payments, cash tracking,
 reports, communication settings, document templates, and operational
 configuration into one internal platform.
 
 | Area | Detail |
 |---|---|
-| Status | In active internal use |
+| Status | Delivered to the client; awaiting acceptance |
 | Role | End-to-end product and development ownership |
 | Product type | Responsive internal web application |
 | Scale | Approximately 65 API endpoints and 40 data models |
@@ -147,10 +147,10 @@ outside the frame.
 
 ## Outcome
 
-Eventra moved from a requested operational tool to a system used in real daily
-work. The project gave me practical experience in requirement discovery,
-modular product design, database modeling, deployment, maintenance, and
-iteration based on user feedback.
+Eventra replaced a mix of paper records and a basic program the venue had
+outgrown. The system has been delivered and is awaiting client acceptance. The
+project gave me practical experience in requirement discovery, modular product
+design, database modeling, deployment, and handover.
 
 ## Repository Purpose
 
