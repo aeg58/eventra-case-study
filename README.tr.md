@@ -1,6 +1,6 @@
 # Eventra — Etkinlik ve Mekân Yönetim Sistemi
 
-> Bu depo, canlıda kullanılan iç sistemin gizlilik odaklı vaka çalışmasıdır.
+> Bu depo, bir müşteriye teslim edilen B2B iç sistemin gizlilik odaklı vaka çalışmasıdır.
 > Kaynak kodu, erişim bilgileri ve müşteri kayıtları bilerek paylaşılmamıştır.
 > Aşağıdaki ekran görüntüleri yalnızca yapılandırma ve toplu görünümleri
 > içerir — rezervasyon kaydı ve müşteri verisi yoktur, işletme adı maskelenmiştir.
@@ -15,7 +15,7 @@ toplayan full-stack bir B2B uygulamasıdır.
 
 | Alan | Bilgi |
 |---|---|
-| Durum | Aktif olarak kullanılıyor |
+| Durum | Müşteriye teslim edildi; kabul bekleniyor |
 | Rolüm | Ürün ve geliştirme sürecinin uçtan uca sahipliği |
 | Ürün türü | Mobil ve masaüstü uyumlu iç web uygulaması |
 | Ölçek | Yaklaşık 65 API uç noktası ve 40 veri modeli |
@@ -35,7 +35,7 @@ gerektirmemeliydi.
 - Full-stack mimariyi ve modüler sınırları şekillendirdim.
 - Özellikleri geliştirip kontrol ederek geri bildirimlerle revize ettim.
 - Linux sunucu, Nginx ve PM2 ortamını hazırlayıp bakımını yaptım.
-- Canlı kullanım geri bildirimleriyle ürünü geliştirmeye devam ettim.
+- Teslim öncesi test, hata ayıklama ve devir süreçlerini yürüttüm.
 
 ## Temel Özellikler
 
@@ -104,10 +104,10 @@ bırakılmıştır.
 
 ## Sonuç
 
-Eventra, talep üzerine başlayan bir yazılım çalışmasından gerçek günlük
-operasyonda kullanılan bir ürüne dönüştü. Proje bana gereksinim çıkarma,
-modüler tasarım, veritabanı modelleme, canlıya alma, bakım ve gerçek kullanıcı
-geri bildirimiyle geliştirme deneyimi kazandırdı.
+Eventra, işletmenin aşmış olduğu defter ve basit program karışımı bir sürecin
+yerini almak üzere tasarlandı. Sistem teslim edildi ve müşteri kabulü
+bekleniyor. Proje bana gereksinim çıkarma, modüler tasarım, veritabanı
+modelleme, canlıya alma ve devir deneyimi kazandırdı.
 
 Bu depo dağıtılabilir ürün kodu değil, yapılan mühendislik çalışmasının güvenli
 ve doğrulanabilir sunumudur.
