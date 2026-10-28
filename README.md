@@ -116,20 +116,15 @@ records the booking form uses — a price changed once shows up in both places.
 ## Architecture
 
 ```mermaid
-flowchart LR
-    U[Staff browser] -->|HTTPS| C[Caddy<br/>TLS, single entry]
-    C --> N[nginx]
-    N --> A[Next.js 16 app<br/>container]
-    A -->|Prisma 7| DB[(MySQL 8.4 LTS<br/>container)]
-    A --> F[(Uploads &<br/>document archive)]
-    A -->|SMTP| M[E-mail]
+flowchart TB
+    U[Staff browser] -->|HTTPS| C
     subgraph Server[Self-managed Linux server]
-      C
-      N
-      A
-      DB
-      F
+      direction LR
+      C[Caddy<br/>TLS, single entry] --> N[nginx] --> A[Next.js 16 app<br/>container]
+      A -->|Prisma 7| DB[(MySQL 8.4 LTS<br/>container)]
+      A --> F[(Uploads &<br/>document archive)]
     end
+    A -->|SMTP| M[E-mail provider]
 ```
 
 One Next.js application serves both the UI and the API. Every API call goes through the same
