@@ -114,16 +114,22 @@ kayıtlarından okunuyor — bir kez değiştirilen fiyat iki yerde birden gör�
 ## Mimari
 
 ```mermaid
-flowchart TB
-    U[Personel tarayıcısı] -->|HTTPS| C
+flowchart LR
+    U[Personel tarayıcısı] -->|HTTPS| C[Caddy<br/>TLS, tek giriş]
+    C --> N[nginx]
+    N --> A[Next.js 16 uygulaması<br/>konteyner]
+    A -->|Prisma 7| DB[(MySQL 8.4 LTS<br/>konteyner)]
+    A --> F[(Yüklemeler ve<br/>belge arşivi)]
     subgraph Server[Kendi yönettiğimiz Linux sunucu]
-      direction LR
-      C[Caddy<br/>TLS, tek giriş] --> N[nginx] --> A[Next.js 16 uygulaması<br/>konteyner]
-      A -->|Prisma 7| DB[(MySQL 8.4 LTS<br/>konteyner)]
-      A --> F[(Yüklemeler ve<br/>belge arşivi)]
+      C
+      N
+      A
+      DB
+      F
     end
-    A -->|SMTP| M[E-posta sağlayıcısı]
 ```
+
+Uygulama ayrıca onay, fiş ve iptal e-postalarını SMTP üzerinden gönderiyor.
 
 Tek bir Next.js uygulaması hem arayüzü hem API'yi sunuyor. Her API çağrısı, iş mantığı çalışmadan
 önce aynı kapıdan geçiyor:
