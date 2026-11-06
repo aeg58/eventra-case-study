@@ -5,7 +5,7 @@
 **Reservation, finance and operations platform for a wedding & event venue**
 
 ![Status](https://img.shields.io/badge/status-in%20production%20since%20Sep%202026-2e7d32)
-![Release](https://img.shields.io/badge/release-v1.2.0%20·%2025%20Oct%202026-455a64)
+![Release](https://img.shields.io/badge/release-v1.3.0%20·%2031%20Oct%202026-455a64)
 ![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs)
 ![React](https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6?logo=typescript&logoColor=white)
