@@ -5,7 +5,7 @@
 **Düğün ve davet salonu için rezervasyon, finans ve operasyon platformu**
 
 ![Durum](https://img.shields.io/badge/durum-Eyl%C3%BCl%202026'dan%20beri%20kullan%C4%B1mda-2e7d32)
-![Sürüm](https://img.shields.io/badge/s%C3%BCr%C3%BCm-v1.2.0%20·%2025%20Ekim%202026-455a64)
+![Sürüm](https://img.shields.io/badge/s%C3%BCr%C3%BCm-v1.3.0%20·%2031%20Ekim%202026-455a64)
 ![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs)
 ![React](https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6?logo=typescript&logoColor=white)
